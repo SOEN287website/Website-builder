@@ -11,7 +11,8 @@ body {
   min-height: 100vh;
   background: white;
 }
-.login-box {
+.signin-box,
+.signup-box {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,14 +24,18 @@ body {
   border-radius: 30px;
   background: #64b5f6;
 }
-.login-title {
+.signin-title,
+.signup-title {
   text-align: center;
   margin: 20px 0 40px 0;
 }
-.login-title header {
+.signin-title,
+.signup-title header {
   color: #2c3e50;
   font-size: 30px;
   font-weight: 600;
+  justify-content: center;
+  align-items: center;
 }
 .input-place {
   background-color: #ffffff;
@@ -94,8 +99,8 @@ a:hover {
   left: 50%;
   color: white;
   transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
 }
 .submit-btn:hover {
