@@ -77,4 +77,150 @@
     });
   </script>
   </body>
+  <style>* {
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #323338;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .profile-box {
+    width: 48%;
+    height: 500px;
+    background-color: #323338;
+    position: relative;
+    bottom: 100px;
+  }
+  .input-place {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #1e1f22;
+    width: 400px;
+    border: none;
+  }
+  label {
+    color: #a0a5b4;
+    font-weight: bolder;
+  }
+  ::placeholder {
+    font-size: 15px;
+  }
+  .picture-box {
+    width: 50%;
+    background-color: #323338;
+    position: relative;
+    height: 500px;
+    display: flex;
+    bottom: 100px;
+  }
+  .seperator {
+    position: relative;
+    background-color: #a0a5b4;
+    width: 400px;
+    height: 1px;
+    z-index: 2;
+    margin-bottom: 15px;
+  }
+  .big-input-place {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #1e1f22;
+    width: 400px;
+    border: none;
+  }
+  
+  #upload-btn {
+    background-color: #5666ef;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+  }
+  
+  #upload-btn:hover {
+    background-color: #444bff;
+  }
+  
+  /* Hide the default file input button */
+  .picture-place {
+    display: none;
+  }
+  .picture-box label {
+    padding-right: 5px;
+    bottom: 100px;
+  }
+  .navbar {
+    position: fixed; /* Make it fixed to the top */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    width: 100%; /* Make it span the full width */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    background-color: #323338; /* Add a background color if needed */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow */
+  }
+  
+  .navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+    padding: 5px 15px 5px 15px;
+  }
+  a:hover {
+    color: #fff; /* Change text color to white */
+    background-color: #4a4a50; /* Lighter blue on hover */
+    border-radius: 4px;
+  }
+  h1 {
+    position: fixed;
+    z-index: 3;
+    top: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .main-seperator {
+    position: fixed;
+    background-color: #a0a5b4;
+    width: 100%;
+    height: 2px;
+    z-index: 2;
+    top: 100px;
+  }
+  </style>
 </html>
