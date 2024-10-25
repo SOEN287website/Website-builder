@@ -381,7 +381,7 @@ a:hover {
           required
         />
       </div>
-      <div class="forgot-password">
+      <div class="forgot-password" onclick="forgotPasswordAlt1()"> 
         <section>
           <input type="checkbox" id="check" />
           <label for="check">Remember me</label>
@@ -394,7 +394,7 @@ a:hover {
         <button id="submit" class="submit-btn" onclick="location.href='main-page.html'"></button>
         <label for="submit">Sign in</label>
       </div>
-        <button id="create-acc" class="create-btn" onclick="location.href='account-creation.html'">Create an account</button>
+        <button id="create-acc" class="create-btn" onclick = "profileSetUpBuisness()" >Create an account</button>
       </div>
     </div>
 
@@ -422,7 +422,7 @@ a:hover {
           required
         />
       </div>
-      <div class="forgot-password-alt">
+      <div class="forgot-password-alt" onclick="forgotPasswordAlt()">
         <section>
           <input type="checkbox" id="check-alt" />
           <label for="check-alt">Remember me</label>
@@ -439,6 +439,19 @@ a:hover {
     </div>
 
 
+
+    <script>
+      function forgotPasswordAlt() {
+          window.location.href = "forgotPassword.html"; 
+      }
+      function forgotPasswordAlt1() {
+          window.location.href = "forgotPassword.html"; 
+      }
+      function profileSetUpBuisness() {
+          window.location.href = "profile-setup.html"; 
+      }
+
+  </script>
 
 
 </body>
