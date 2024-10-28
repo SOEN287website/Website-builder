@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: grey;
+}
+
+.googleMap{
+
+    top: 33%;
+    left: 28.5%;
+    position: fixed;
+
+
+}
+
+.searchBarHome{
+            top: 0.25%;
+            left: 0%;
+            position:fixed;
+            font-family: Georgia;
+            font-weight: bolder;
+            font-size: 10vh;
+            background-color: white;
+            
+
+        }
+
+.searchBarFinder{
+
+            top: 12.25%;
+            left: 0.0%;
+            position:fixed;
+            font-family: Georgia;
+            height: 20vh;
+            width: 190vh;
+            background-color: red;
+            display: block;
+            
+}
+
+.trendingDeals {
+    position: fixed;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s;
+      top: 13%;
+      left: 2.5%;
+      height: 18vh;
+      width: 25vh;
+      font-weight: 200;
+      font-size: larger;
+    }
+
+       
+    .trendingDeals:hover {
+      background-color: #45a049; 
+    }
+
+    .inactiveDeals {
+    position: fixed;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s;
+      top: 13%;
+      left: 19.5%;
+      height: 18vh;
+      width: 25vh;
+      font-weight: 200;
+      font-size: larger;
+    }
+
+       
+    .inactiveDeals:hover {
+      background-color: #45a049; 
+    }
+
+    .financeButton {
+    position: fixed;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s;
+      top: 13%;
+      left: 36.75%;
+      height: 18vh;
+      width: 25vh;
+      font-weight: 200;
+      font-size: larger;
+    }
+
+       
+    .financeButton:hover {
+      background-color: #45a049; 
+    }
+
+    .settingsLogin {
+    position: fixed;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s;
+      top: 13%;
+      left: 53.75%;
+      height: 18vh;
+      width: 25vh;
+      font-weight: 200;
+      font-size: larger;
+    }
+
+       
+    .settingsLogin:hover {
+      background-color: #45a049; 
+    }
+
+    .switchUser {
+    position: fixed;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s;
+      top: 13%;
+      left: 71.75%;
+      height: 18vh;
+      width: 25vh;
+      font-weight: 200;
+      font-size: larger;
+    }
+
+       
+    .switchUser:hover {
+      background-color: #45a049; 
+    }
+
+    .logOut {
+    position: fixed;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s;
+      top: 13%;
+      left: 88.75%;
+      height: 10vh;
+      width: 15vh;
+      font-weight: 200;
+      font-size: larger;
+    }
+
+       
+    .logOut:hover {
+      background-color: orangered; 
+    }
+
+
+
+
+
+    
+    </style>
+</head>
+<body>
+    
+
+    <iframe 
+    class = "googleMap"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345087254!2d144.9537353153221!3d-37.81627937975185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43bf1e0e5d%3A0x5045675218cedf0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1619452460975!5m2!1sen!2sus" 
+    width="800" 
+    height="450" 
+    allowfullscreen="" 
+    loading="lazy">
+
+    
+</iframe>
+
+
+<div class="searchBarHome">------- Service Search MTL! -------</div>
+<label class="searchBarFinder"></label>
+<button class="trendingDeals">Trending Deals</button>
+<button class="inactiveDeals">Inactive Deals</button>
+<button class="financeButton">Finances</button>
+<button class="settingsLogin">Settings / Login Info</button>
+<button class="switchUser">Switch to Buisness Account</button>
+<button class="logOut">Log Off</button>
+
+</body>
+</html>
