@@ -33,7 +33,7 @@
             class="input-place"
             type="text"
             name="businessName"
-            placeholder="Business name"
+            placeholder="John's Cleaners"
             required
           />
         </div>
@@ -46,7 +46,7 @@
             class="input-place"
             type="text"
             name="businessAddress"
-            placeholder="Business address"
+            placeholder="123 This Street, QC, MTL"
             required
           />
         </div>
@@ -58,7 +58,7 @@
             class="input-place"
             type="tel"
             name="phone"
-            placeholder="Phone number"
+            placeholder="123-456-7890"
             required
           />
         </div>
@@ -70,7 +70,7 @@
             class="input-place"
             type="email"
             name="email"
-            placeholder="E-mail"
+            placeholder="JohnDoe@gmail.com"
             required
           />
         </div>
@@ -82,6 +82,18 @@
             class="big-input-place"
             name="description"
             placeholder="Brief description"
+            required
+          ></textarea>
+        </div>
+        <div class="seperator"></div>
+        <div class="big-input-box">
+          <label for="Services">Services</label>
+          <textarea
+            id="Services"
+            class="big-input-place"
+            type="text"
+            name="Services"
+            placeholder="Service title, cost, description; Another title, cost, description"
             required
           ></textarea>
         </div>
@@ -195,7 +207,7 @@ rewrite it myself when we get into backend InshAllah-->
       }
 
       .big-input-place {
-        height: 90px;
+        height: 30px;
         padding: 1vh;
         resize: vertical;
       }
