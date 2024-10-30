@@ -44,4 +44,140 @@
       </div>
     </div>
   </body>
+  <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+  }
+  .signin-box,
+  .signup-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    border: 1px solid #d1d8dd;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    background: #64b5f6;
+  }
+  .signin-title,
+  .signup-title {
+    text-align: center;
+    margin: 20px 0 40px 0;
+  }
+  .signin-title,
+  .signup-title header {
+    color: #2c3e50;
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-place {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+  }
+  .input-box .input-place {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    font-size: 19px;
+    padding: 0 25px;
+    border: none;
+    box-shadow: 0px 4px 4px 0px;
+    outline: none;
+    transition: 0.2s;
+  }
+  ::placeholder {
+    font-weight: 500;
+    color: #95a5a6;
+  }
+  .input-place:focus {
+    width: 105%;
+  }
+  .forgot-password {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  section {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #4a4a4a;
+  }
+  #check {
+    margin-right: 7px;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .input-submit {
+    position: relative;
+  }
+  .submit-btn {
+    width: 100%;
+    height: 50px;
+    background-color: #222;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .input-submit label {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .submit-btn:hover {
+    background: black;
+    transform: scale(1.05);
+  }
+  .create-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #64b5f6;
+    border-radius: 20px;
+    transition: 0.2s;
+  }
+  .create-btn {
+    color: black;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .create-btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+  }
+  </style>
 </html>
