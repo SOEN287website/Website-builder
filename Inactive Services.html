@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inactive Services</title>
+    <link rel="stylesheet" href="inactiveServices.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inactive Services</h1>
+        <p>View the status of currently inactive or maintenance mode services.</p>
+
+        <div class="service-box">
+            <!-- Left section for service list -->
+            <div class="service-left">
+                <h3>Current Inactive Services</h3>
+                
+                <div class="service-row">
+                    <div class="service-group">
+                        <label>Service Name</label>
+                        <input type="text" value="Student Portal" disabled>
+                    </div>
+                    <div class="service-group">
+                        <label>Status</label>
+                        <input type="text" value="Maintenance" disabled>
+                    </div>
+                </div>
+
+                <div class="service-row">
+                    <div class="service-group">
+                        <label>Service Name</label>
+                        <input type="text" value="Library System" disabled>
+                    </div>
+                    <div class="service-group">
+                        <label>Status</label>
+                        <input type="text" value="Temporarily Down" disabled>
+                    </div>
+                </div>
+
+                <div class="service-group">
+                    <label>Expected Duration:</label>
+                    <textarea disabled>Maintenance work is scheduled to complete within 2 hours.</textarea>
+                </div>
+
+                <button>Refresh Status</button>
+            </div>
+
+            <!-- Right section for additional info -->
+            <div class="service-right">
+                <h3>Service Information</h3>
+                <table>
+                    <tr>
+                        <td>Last Updated:</td>
+                        <td>October 31, 2024 - 14:30 EST</td>
+                    </tr>
+                    <tr>
+                        <td>Support Email:</td>
+                        <td>support@concordia.ca</td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Line:</td>
+                        <td>+1 (514) 398-4500</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
