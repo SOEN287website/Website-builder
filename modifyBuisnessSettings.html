@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Setup</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="our-website-name">
+          <div><a href="#">Insert Website Name</a></div>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">????</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page-title">
+      <h1>MODIFY YOUR PROFILE</h1>
+      <div class="main-seperator"></div>
+    </div>
+
+    <form id="profileForm" class="container" onsubmit="handleSubmit(event)">
+      <div class="profile-box">
+        <div class="input-box">
+          <label for="business-name">Modify Business name</label>
+          <input
+            id="business-name"
+            class="input-place"
+            type="text"
+            name="businessName"
+            placeholder="John's Cleaners"
+            required
+          />
+        </div>
+
+        <div class="seperator"></div>
+        <div class="input-box">
+          <label for="business-address">Modify Business address</label>
+          <input
+            id="business-address"
+            class="input-place"
+            type="text"
+            name="businessAddress"
+            placeholder="123 This Street, QC, MTL"
+            required
+          />
+        </div>
+        <div class="seperator"></div>
+        <div class="input-box">
+          <label for="phone">Modify Phone Number</label>
+          <input
+            id="phone"
+            class="input-place"
+            type="tel"
+            name="phone"
+            placeholder="123-456-7890"
+            required
+          />
+        </div>
+        <div class="seperator"></div>
+        <div class="input-box">
+          <label for="email"> Modify E-mail</label>
+          <input
+            id="email"
+            class="input-place"
+            type="email"
+            name="email"
+            placeholder="JohnDoe@gmail.com"
+            required
+          />
+        </div>
+        <div class="seperator"></div>
+        <div class="big-input-box">
+          <label for="description">Modify Business description</label>
+          <textarea
+            id="description"
+            class="big-input-place"
+            name="description"
+            placeholder="Brief description"
+            required
+          ></textarea>
+        </div>
+        <div class="seperator"></div>
+        <div class="big-input-box">
+          <label for="Services">Services</label>
+          <textarea
+            id="Services"
+            class="big-input-place"
+            type="text"
+            name="Services"
+            placeholder="Service title, cost, description; Another title, cost, description"
+            required
+          ></textarea>
+        </div>
+      </div>
+      <div class="picture-box">
+        <label for="business-logo">Modify your logo</label>
+        <img id="logo-preview" src="default.png" alt="Logo preview" />
+        <input
+          id="business-logo"
+          class="picture-place"
+          type="file"
+          name="logo"
+          accept="image/*"
+          required
+          onchange="previewImage(event)"
+        />
+        <button type="button" id="upload-btn">Modify Logo</button>
+      </div>
+      <button type="submit" class="done-btn">Done</button>
+    </form>
+
+    <div id="submission-message" class="message-box hidden"></div>
+    <!-- the following JS code is temporary, i am going to delete it and
+rewrite it myself when we get into backend InshAllah-->
+    <script>
+      document
+        .getElementById("upload-btn")
+        .addEventListener("click", function () {
+          document.getElementById("business-logo").click();
+        });
+
+      function previewImage(event) {
+        const imageFile = event.target.files[0];
+        if (imageFile) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("logo-preview").src = e.target.result;
+          };
+          reader.readAsDataURL(imageFile);
+        }
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+
+        // For frontend-only demo: Show submitted data in console and display success message
+        console.log("Submitted Profile Data:", data);
+
+        const messageBox = document.getElementById("submission-message");
+        messageBox.textContent = "Profile setup completed successfully!";
+        messageBox.classList.remove("hidden");
+        messageBox.classList.add("success");
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: black;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        padding-top: 120px;
+      }
+
+      .page-title {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-color: white;
+        padding: 0 0;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+
+      .input-place,
+      .big-input-place {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2vh;
+        margin-top: 1vh;
+        height: 33px;
+        border-radius: 0.5vh;
+        background-color: #eee;
+        width: 540px;
+        border: #1e1f22;
+        padding: 0 1vh;
+        font-size: 16px;
+      }
+
+      .big-input-place {
+        height: 30px;
+        padding: 1vh;
+        resize: vertical;
+      }
+
+      label {
+        color: #a0a5b4;
+        font-weight: bolder;
+      }
+
+      ::placeholder {
+        font-size: 15px;
+        margin-left: 0.5vh;
+      }
+
+      .profile-box {
+        justify-content: center;
+        align-items: center;
+        height: 620px;
+        width: 600px;
+        margin: 20px 0;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        background-color: #fff;
+        border-radius: 8px;
+      }
+
+      .picture-box {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px 0;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        background-color: #fff;
+        border-radius: 8px;
+      }
+
+      .seperator {
+        position: relative;
+        background-color: #000;
+        width: 557px;
+        height: 1px;
+        z-index: 2;
+        margin-bottom: 15px;
+      }
+
+      #upload-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 40px;
+      }
+
+      #upload-btn:hover {
+        background-color: #ff6666;
+      }
+
+      .picture-place {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .picture-box label {
+        padding-right: 5px;
+      }
+
+      #logo-preview {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #dfdfdf;
+        margin-bottom: 2vh;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      .navdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      li {
+        margin: 0 10px;
+      }
+
+      a {
+        text-decoration: none;
+        z-index: 2;
+        padding: 15px 20px 15px 20px;
+      }
+
+      a:hover {
+        color: #fff;
+        background-color: #4a4a50;
+        border-radius: 4px;
+      }
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+
+      .main-seperator {
+        background-color: #000;
+        width: 100%;
+        height: 2px;
+        margin-top: 10px;
+      }
+
+      .done-btn {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 150px;
+      }
+
+      .done-btn:hover {
+        background-color: #ff6666;
+      }
+
+      .message-box {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        border-radius: 5px;
+        z-index: 1001;
+        background-color: #4caf50;
+        color: white;
+        transition: opacity 0.3s ease;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .success {
+        background-color: #4caf50;
+      }
+
+      .error {
+        background-color: #f44336;
+      }
+    </style>
+  </body>
+</html>
