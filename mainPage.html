@@ -49,7 +49,7 @@
             height: 87vh; 
             top: 7%;
             left: 5%;
-            background-color: rgb(158, 118, 69); 
+            background-color: rgb(249, 249, 249); 
             border-radius: 50px; 
             z-index: 1;
 
@@ -66,7 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: lightgreen;
+  background: rgb(255, 255, 255);
 }
 .signin-box,
 .signup-box {
@@ -212,10 +212,11 @@ a:hover {
 }
 
 
-.signin-box1,
-.signup-box1 {
+
+
+.signin-box-alt {
   top: 27%; 
-  left: 12.5%; 
+  left: 57.5%; 
   position: fixed;
   display: flex;
   justify-content: center;
@@ -226,17 +227,17 @@ a:hover {
   border: 1px solid #d1d8dd;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-  background: #64b5f6;
+  background: #81c784; /* Changed background color for distinction */
   z-index: 2;
 }
-.signin-title1,
-.signup-title1 {
+
+.signin-title-alt {
   text-align: center;
   margin: 20px 0 40px 0;
   z-index: 2;
 }
-.signin-title1,
-.signup-title1 header {
+
+.signin-title-alt header {
   color: #2c3e50;
   font-size: 30px;
   font-weight: 600;
@@ -244,13 +245,15 @@ a:hover {
   align-items: center;
   z-index: 2;
 }
-.input-place1 {
+
+.input-place-alt {
   background-color: #ffffff;
   color: #333333;
   border: 1px solid #cccccc;
   z-index: 2;
 }
-.input-box1 .input-place1 {
+
+.input-box-alt .input-place-alt {
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
@@ -263,54 +266,40 @@ a:hover {
   transition: 0.2s;
   z-index: 2;
 }
-::placeholder {
-  font-weight: 500;
-  color: #95a5a6;
-  z-index: 2;
-}
-.input-place1:focus {
+
+.input-place-alt:focus {
   width: 105%;
 }
-.forgot-password1 {
+
+.forgot-password-alt {
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
   z-index: 2;
 }
-section {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  color: #4a4a4a;
-  z-index: 2;
-}
-#check {
+
+#check-alt {
   margin-right: 7px;
   z-index: 2;
 }
-a {
-  text-decoration: none;
-  z-index: 2;
-}
-a:hover {
-  text-decoration: underline;
-  z-index: 2;
-}
-.input-submit1 {
+
+.input-submit-alt {
   position: relative;
   z-index: 2;
 }
-.submit-btn1 {
+
+.submit-btn-alt {
   width: 100%;
   height: 50px;
-  background-color: #222;
+  background-color: #333;
   border-radius: 30px;
   border: none;
   cursor: pointer;
   transition: 0.2s;
   z-index: 2;
 }
-.input-submit1 label {
+
+.input-submit-alt label {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -321,12 +310,14 @@ a:hover {
   cursor: pointer;
   z-index: 2;
 }
-.submit-btn1:hover {
+
+.submit-btn-alt:hover {
   background: black;
   transform: scale(1.05);
   z-index: 2;
 }
-.create-btn1 {
+
+.create-btn-alt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,12 +326,13 @@ a:hover {
   height: 30px;
   cursor: pointer;
   border: none;
-  background-color: #64b5f6;
+  background-color: #81c784;
   border-radius: 20px;
   transition: 0.2s;
   z-index: 2;
 }
-.create-btn1 {
+
+.create-btn-alt {
   color: black;
   font-size: 20px;
   background: none;
@@ -349,11 +341,13 @@ a:hover {
   font-weight: 600;
 }
 
-.create-btn1:hover {
+.create-btn-alt:hover {
   background-color: white;
   transform: scale(1.05);
   z-index: 2;
 }
+
+
 
         
 
@@ -387,7 +381,7 @@ a:hover {
           required
         />
       </div>
-      <div class="forgot-password">
+      <div class="forgot-password" onclick="forgotPasswordAlt1()"> 
         <section>
           <input type="checkbox" id="check" />
           <label for="check">Remember me</label>
@@ -400,47 +394,64 @@ a:hover {
         <button id="submit" class="submit-btn" onclick="location.href='main-page.html'"></button>
         <label for="submit">Sign in</label>
       </div>
-        <button id="create-acc" class="create-btn" onclick="location.href='account-creation.html'">Create an account</button>
+        <button id="create-acc" class="create-btn" onclick = "profileSetUpBuisness()" >Create an account</button>
       </div>
     </div>
 
 
-    <div class="signin-box1">
-      <div class="signin-title1">
+
+
+
+    <div class="signin-box-alt">
+      <div class="signin-title-alt">
         <header>Sign in</header>
       </div>
-      <div class="input-box1">
+      <div class="input-box-alt">
         <input
-          class="input-place1"
+          class="input-place-alt"
           type="text"
           placeholder="Username"
           required
         />
       </div>
-      <div class="input-box1">
+      <div class="input-box-alt">
         <input
-          class="input-place1"
+          class="input-place-alt"
           type="password"
           placeholder="Password"
           required
         />
       </div>
-      <div class="forgot-password1">
+      <div class="forgot-password-alt" onclick="forgotPasswordAlt()">
         <section>
-          <input type="checkbox" id="check" />
-          <label for="check">Remember me</label>
+          <input type="checkbox" id="check-alt" />
+          <label for="check-alt">Remember me</label>
         </section>
         <section>
           <a href="#">Forgot password?</a>
         </section>
       </div>
-      <div class="input-submit1">
-        <button id="submit" class="submit-btn" onclick="location.href='main-page.html'"></button>
-        <label for="submit">Sign in</label>
+      <div class="input-submit-alt">
+        <button id="submit-alt" class="submit-btn-alt" onclick="location.href='main-page.html'"></button>
+        <label for="submit-alt">Sign in</label>
       </div>
-        <button id="create-acc" class="create-btn" onclick="location.href='account-creation.html'">Create an account</button>
-      </div>
+      <button id="create-acc-alt" class="create-btn-alt" onclick="location.href='account-creation.html'">Create an account</button>
     </div>
+
+
+
+    <script>
+      function forgotPasswordAlt() {
+          window.location.href = "forgotPassword.html"; 
+      }
+      function forgotPasswordAlt1() {
+          window.location.href = "forgotPassword.html"; 
+      }
+      function profileSetUpBuisness() {
+          window.location.href = "profile-setup.html"; 
+      }
+
+  </script>
 
 
 </body>
