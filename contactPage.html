@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactUsStyle.css">  
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: white ;
+    color: black;
+    font-size : 14px;
+}
+.container{
+    width: 80%;
+    margin: 30px auto;
+
+}
+.contact-box{
+    background-color: aliceblue;
+    display: flex;
+    border-radius: 25px;
+
+}
+.contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    
+    color: rgb(3, 31, 54);
+    
+}
+.contact-right{
+    flex-basis:40%;
+    padding: 40px;
+    color: white;
+    background: rgb(24, 20, 154);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+}
+h1{
+    margin-top: 0px;
+
+
+    margin-bottom: 3px;
+}
+.container p{
+
+    margin-left: 3px;
+    margin-bottom: 5px;
+}
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group{
+    flex-basis: 45%;
+
+}
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+label{
+    color: black;
+
+}
+form {
+    margin-top: 30px;
+    color: black;
+    border-radius: 100px;
+}
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+}
+button{
+    color: white;
+    background:rgb(24, 20, 154);
+    border: none;
+    outline: 1px white solid;
+    height: 35px;
+    width: 75px;
+    border-radius: 25px;
+    margin-top: 5px;
+
+}
+.contact-left h3{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.contact-right h3{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+tr{
+ margin-top: 30px;
+}
+tr td:first-child{
+    padding-right: 10px;
+    padding-bottom: 40px;
+    align-content: auto;
+}
+tr td:last-child{
+    font-style: italic;
+
+    padding-bottom: 40px;
+
+}
+</style>
+
+<body>
+<div class="container">
+    <h1>Contact Us</h1>
+    <h3>We are always there to answer any questions you have</h3>
+    <p>Send us a message and we will be in touch with you shortly.</p>
+    <form>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send a request</h3>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Mohammed Ali">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="text" placeholder="+1 (514) 798 5876">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="mohammed@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="I need help with...">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Message:</label>
+                    <textarea rows="5" placeholder="Write your message"></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+            
+            <div class="contact-right">
+                <h3>Reach us</h3>
+                <table class="contact-table">
+                    <tr>
+                        <td>Email:</td>
+                        <td>contactus@concordia.ca</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td>+1 (514) 398-4504</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>1455 Blvd. De Maisonneuve Ouest,<br> Montreal, Quebec H3G 1M8</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

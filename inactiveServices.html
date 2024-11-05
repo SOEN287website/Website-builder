@@ -1,0 +1,267 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inactive Services</title>
+    <link rel="stylesheet" href="inactiveServices.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="our-website-name">
+          <div><a href="homeScreen.html">Services-MTL</a></div>
+        </div>
+        <ul>
+          <li><a href="homeScreen.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contactPage.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Inactive Services</h1>
+      <p>View the status of currently inactive or maintenance mode services.</p>
+
+      <div class="service-box">
+        <!-- Left section for service list -->
+        <div class="service-left">
+          <h3>Current Inactive Services</h3>
+
+          <div class="service-row">
+            <div class="service-group">
+              <label>Service Name</label>
+              <input type="text" value="Student Portal" disabled />
+            </div>
+            <div class="service-group">
+              <label>Status</label>
+              <input type="text" value="Maintenance" disabled />
+            </div>
+          </div>
+
+          <div class="service-row">
+            <div class="service-group">
+              <label>Service Name</label>
+              <input type="text" value="Library System" disabled />
+            </div>
+            <div class="service-group">
+              <label>Status</label>
+              <input type="text" value="Temporarily Down" disabled />
+            </div>
+          </div>
+
+          <div class="service-group">
+            <label>Expected Duration:</label>
+            <textarea disabled>
+Maintenance work is scheduled to complete within 2 hours.</textarea
+            >
+          </div>
+
+          <a href="inactiveServices.html"><button>Refresh Status</button></a>
+        </div>
+
+        <!-- Right section for additional info -->
+        <div class="service-right">
+          <h3>Service Information</h3>
+          <table>
+            <tr>
+              <td>Last Updated:</td>
+              <td>October 31, 2024 - 14:30 EST</td>
+            </tr>
+            <tr>
+              <td>Support Email:</td>
+              <td>support@concordia.ca</td>
+            </tr>
+            <tr>
+              <td>Emergency Line:</td>
+              <td>+1 (514) 398-4500</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  /* inactiveServices.css */
+
+  /* Reset default margins and padding */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Basic body styling matching the contact page */
+  body {
+    background: white;
+    color: black;
+    font-size: 14px;
+  }
+
+  /* Container styling with centered content */
+  .container {
+    width: 80%;
+    margin: 120px auto;
+  }
+
+  /* Main service box container with flex layout */
+  .service-box {
+    background-color: aliceblue;
+    display: flex;
+    border-radius: 25px;
+  }
+
+  /* Left section styling - matches contact-left width ratio */
+  .service-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+    color: rgb(3, 31, 54);
+  }
+
+  /* Right section styling with consistent blue background */
+  .service-right {
+    flex-basis: 40%;
+    padding: 40px;
+    color: white;
+    background: rgb(24, 20, 154);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  /* Header styling */
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+
+  /* Paragraph styling */
+  .container p {
+    margin-left: 3px;
+    margin-bottom: 5px;
+  }
+
+  /* Flex row for service items */
+  .service-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  /* Service group container */
+  .service-group {
+    flex-basis: 45%;
+  }
+
+  /* Input field styling */
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: transparent;
+  }
+
+  /* Label styling */
+  label {
+    color: black;
+  }
+
+  /* Textarea styling */
+  textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    margin-top: 5px;
+    background: transparent;
+    resize: none;
+    height: 60px;
+  }
+
+  /* Button styling with consistent blue theme */
+  button {
+    color: white;
+    background: rgb(24, 20, 154);
+    border: none;
+    outline: 1px white solid;
+    height: 35px;
+    width: 100px;
+    border-radius: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  /* Section header styling */
+  .service-left h3,
+  .service-right h3 {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  /* Table row styling */
+  tr {
+    margin-top: 30px;
+  }
+
+  /* First column in table */
+  tr td:first-child {
+    padding-right: 10px;
+    padding-bottom: 40px;
+  }
+
+  /* Second column in table */
+  tr td:last-child {
+    font-style: italic;
+    padding-bottom: 40px;
+  }
+
+  /* Disabled input styling */
+  input:disabled,
+  textarea:disabled {
+    color: rgb(3, 31, 54);
+    cursor: not-allowed;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    padding: 11px 30px;
+    color: black;
+  }
+
+  a:hover {
+    color: #fff;
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+</style>

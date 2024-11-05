@@ -49,7 +49,7 @@
             height: 87vh; 
             top: 7%;
             left: 5%;
-            background-color: rgb(249, 249, 249); 
+            background-color: rgb(158, 118, 69); 
             border-radius: 50px; 
             z-index: 1;
 
@@ -66,7 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: rgb(255, 255, 255);
+  background: white;
 }
 .signin-box,
 .signup-box {
@@ -82,7 +82,7 @@ body {
   border: 1px solid #d1d8dd;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-  background: #64b5f6;
+  background: grey;
   z-index: 2;
 }
 .signin-title,
@@ -191,7 +191,7 @@ a:hover {
   height: 30px;
   cursor: pointer;
   border: none;
-  background-color: #64b5f6;
+  background-color: grey;
   border-radius: 20px;
   transition: 0.2s;
   z-index: 2;
@@ -227,7 +227,7 @@ a:hover {
   border: 1px solid #d1d8dd;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-  background: #81c784; /* Changed background color for distinction */
+  background: grey; 
   z-index: 2;
 }
 
@@ -347,6 +347,32 @@ a:hover {
   z-index: 2;
 }
 
+.randomButton{
+
+  background-color: transparent;
+  z-index: 200;
+  width: 40vh;
+  height: 4vh;
+  cursor: pointer;
+  position: fixed;
+  top: 75.0%;
+  left: 64%;
+
+}
+
+.randomButton2{
+
+background-color: transparent;
+z-index: 200;
+width: 40vh;
+height: 4vh;
+cursor: pointer;
+position: fixed;
+top: 75.0%;
+left: 18%;
+
+}
+
 
 
         
@@ -361,7 +387,7 @@ a:hover {
   <div class="homeSquare"></div>
   <div class="mainLine"></div>
 
-  <div class="signin-box">
+  <div class="signin-box" onclick="buisnessHome()">
       <div class="signin-title">
         <header>Sign in</header>
       </div>
@@ -383,18 +409,21 @@ a:hover {
       </div>
       <div class="forgot-password" onclick="forgotPasswordAlt1()"> 
         <section>
-          <input type="checkbox" id="check" />
-          <label for="check">Remember me</label>
+          
+          
         </section>
         <section>
-          <a href="#">Forgot password?</a>
+          <a href="forgotPassword.html">Forgot password?</a>
         </section>
       </div>
       <div class="input-submit">
         <button id="submit" class="submit-btn" onclick="location.href='main-page.html'"></button>
         <label for="submit">Sign in</label>
       </div>
-        <button id="create-acc" class="create-btn" onclick = "profileSetUpBuisness()" >Create an account</button>
+        <button id="create-acc" class="create-btn" onclick = "profileSetUpBuisness()">Create an account</button>
+        <section>
+          <a href="profile-setup.html"></a>
+        </section>
       </div>
     </div>
 
@@ -402,7 +431,7 @@ a:hover {
 
 
 
-    <div class="signin-box-alt">
+    <div class="signin-box-alt" onclick="clientHome()">
       <div class="signin-title-alt">
         <header>Sign in</header>
       </div>
@@ -424,19 +453,22 @@ a:hover {
       </div>
       <div class="forgot-password-alt" onclick="forgotPasswordAlt()">
         <section>
-          <input type="checkbox" id="check-alt" />
-          <label for="check-alt">Remember me</label>
+          
         </section>
         <section>
-          <a href="#">Forgot password?</a>
+          <a href="forgotPassword.html">Forgot password?</a>
         </section>
       </div>
       <div class="input-submit-alt">
         <button id="submit-alt" class="submit-btn-alt" onclick="location.href='main-page.html'"></button>
         <label for="submit-alt">Sign in</label>
       </div>
-      <button id="create-acc-alt" class="create-btn-alt" onclick="location.href='account-creation.html'">Create an account</button>
+      <button id="create-acc-alt" class="create-btn-alt" onclick="location.href='profileSetUpClient.html'">Create an account</button>
+      
     </div>
+
+    <div class="randomButton" onclick="location.href='profileSetUpClient.html'"></div>
+    <div class="randomButton2" onclick="location.href='profile-setup.html'"></div>
 
 
 
@@ -450,6 +482,17 @@ a:hover {
       function profileSetUpBuisness() {
           window.location.href = "profile-setup.html"; 
       }
+      function profileSetUpClient() {
+    window.location.href = "profileSetUpClient.html"; 
+  }
+      function clientHome() {
+          window.location.href = "homeScreen.html"; 
+      }
+      function buisnessHome() {
+          window.location.href = "homeScreenBuisness.html"; 
+      }
+
+     
 
   </script>
 
