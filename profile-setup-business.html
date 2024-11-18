@@ -6,33 +6,62 @@
     <title>Profile Setup</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navdiv">
-        <div class="our-website-name">
-          <div><a href="#">Insert Website Name</a></div>
-        </div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">????</a></li>
-        </ul>
-      </div>
-    </nav>
     <div class="page-title">
-      <h1>SETUP YOUR PROFILE</h1>
+      <h1>SETUP YOUR BUSINESS PROFILE</h1>
       <div class="main-seperator"></div>
     </div>
 
-    <form id="profileForm" class="container" onsubmit="handleSubmit(event)">
+    <form
+      id="profileForm"
+      class="container"
+      onsubmit="handleSubmit(event)"
+      action="connect.php"
+      method="post"
+    >
       <div class="profile-box">
+        <div class="input-box">
+          <label for="Username">Username</label>
+          <input
+            id="User-name"
+            class="input-place"
+            type="text"
+            name="BusinessUserName"
+            placeholder="John_Doe123"
+            required
+          />
+        </div>
+        <div class="seperator"></div>
+        <div class="input-box">
+          <label for="Password">Password</label>
+          <input
+            id="Password"
+            class="input-place"
+            type="password"
+            name="Password"
+            placeholder="JohnDoe123"
+            required
+          />
+        </div>
+
+        <div class="seperator"></div>
+        <div class="input-box">
+          <label for="Confirm-Password">Confirm Password</label>
+          <input
+            id="Confirm-Password"
+            class="input-place"
+            type="password"
+            name="ConfirmPassword"
+            placeholder="JohnDoe123"
+            required
+          />
+        </div>
         <div class="input-box">
           <label for="business-name">Business name</label>
           <input
             id="business-name"
             class="input-place"
             type="text"
-            name="businessName"
+            name="BusinessName"
             placeholder="John's Cleaners"
             required
           />
@@ -45,7 +74,7 @@
             id="business-address"
             class="input-place"
             type="text"
-            name="businessAddress"
+            name="BusinessAddress"
             placeholder="123 This Street, QC, MTL"
             required
           />
@@ -57,7 +86,7 @@
             id="phone"
             class="input-place"
             type="tel"
-            name="phone"
+            name="BusinessPhone"
             placeholder="123-456-7890"
             required
           />
@@ -69,7 +98,7 @@
             id="email"
             class="input-place"
             type="email"
-            name="email"
+            name="BusinessEmail"
             placeholder="JohnDoe@gmail.com"
             required
           />
@@ -80,7 +109,7 @@
           <textarea
             id="description"
             class="big-input-place"
-            name="description"
+            name="Description"
             placeholder="Brief description"
             required
           ></textarea>
@@ -116,8 +145,6 @@
     </form>
 
     <div id="submission-message" class="message-box hidden"></div>
-    <!-- the following JS code is temporary, i am going to delete it and
-rewrite it myself when we get into backend InshAllah-->
     <script>
       document
         .getElementById("upload-btn")
@@ -171,7 +198,7 @@ rewrite it myself when we get into backend InshAllah-->
 
       .page-title {
         position: fixed;
-        top: 50px;
+        top: 0;
         left: 0;
         right: 0;
         z-index: 3;
@@ -225,9 +252,8 @@ rewrite it myself when we get into backend InshAllah-->
       .profile-box {
         justify-content: center;
         align-items: center;
-        height: 620px;
+        height: 960px;
         width: 600px;
-        margin: 20px 0;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         background-color: #fff;
@@ -242,7 +268,7 @@ rewrite it myself when we get into backend InshAllah-->
         height: 400px;
         width: 600px;
         max-width: 600px;
-        margin: 20px 0;
+        margin-top: 100px;
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         background-color: #fff;
@@ -291,52 +317,6 @@ rewrite it myself when we get into backend InshAllah-->
         margin-bottom: 2vh;
       }
 
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: #fff;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-      }
-
-      .navdiv {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-      }
-
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-
-      li {
-        margin: 0 10px;
-      }
-
-      a {
-        text-decoration: none;
-        z-index: 2;
-        padding: 15px 20px 15px 20px;
-      }
-
-      a:hover {
-        color: #fff;
-        background-color: #4a4a50;
-        border-radius: 4px;
-      }
-
-      h1 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        font-size: 2.5rem;
-      }
-
       .main-seperator {
         background-color: #000;
         width: 100%;
@@ -345,6 +325,9 @@ rewrite it myself when we get into backend InshAllah-->
       }
 
       .done-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: red;
         color: white;
         border: none;
