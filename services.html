@@ -14,13 +14,12 @@
     <nav class="navbar">
       <div class="navdiv">
         <div class="our-website-name">
-          <div><a href="#">Insert Website Name</a></div>
+          <div><a href="homeScreenBuisness.html">Services-MTL</a></div>
         </div>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">????</a></li>
+          <li><a href="homeScreenBuisness.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contactPage.html">Contact Us</a></li>
         </ul>
       </div>
     </nav>
@@ -47,8 +46,19 @@
             <img src="conco.png" />
           </div>
         </div>
+        <div class="listing-details">
+          <div class="price-tag">
+            <p class="Price-title">Price: 50$</p>
+          </div>
+          <div class="time">
+            <p class="time-title">Time: 2 Hrs</p>
+          </div>
+          <div class="date">
+            <p class="date-title">Date: Jan 1st 2025</p>
+          </div>
+        </div>
         <a href="#">
-          <button>Buy Service</button>
+          <button class="buy-service">Buy Service</button>
         </a>
       </div>
     </div>
@@ -177,8 +187,8 @@
     .tutoring-logo img {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* Scales the image to cover the div without distorting */
-      border-radius: 50%; /* Ensures the image matches the rounded shape */
+      object-fit: contain;
+      border-radius: 50%;
     }
     h3 {
       text-align: center;
@@ -188,13 +198,40 @@
       margin: 0;
       flex: 1;
     }
-    button {
+    .buy-service {
       height: 35px;
-      width: 100px;
+      width: 150px;
       border: 2px solid red;
       background-color: white;
       border-radius: 25px;
       padding: 0 2px 0 2px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .buy-service:hover {
+      background-color: red;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .price-tag,
+    .time,
+    .date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #dfdfdf;
+      color: black;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      width: 200px;
+      text-align: center;
+      height: 20px;
+    }
+    .listing-details {
+      display: flex;
+      gap: 25px;
     }
   </style>
 </html>
